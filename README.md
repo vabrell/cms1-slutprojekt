@@ -1,7 +1,7 @@
 # cms1-slutprojekt
 Slutprojekt för CMS1, IT-Högskolan
 
-#Godkänt
+# Godkänt
 * Bygg ett eget Wordpress-tema vars syfte/innehåll är helt valfritt
 * Temat innehar sidmallar för följande, samt minst två (2) unika sidmallar för Sidor;
   * Startsida, blogg, inlägg, sidor, arkiv (månad, kategori, författare), sök, 404
@@ -21,7 +21,7 @@ Slutprojekt för CMS1, IT-Högskolan
 Loggarna lämnas in tillsammans med inlämningen.  
 Alternativt kan länk till git-repo få ersätta loggen, commit-meddelanden skall då vara beskrivande.
 
-#Väl Godkänt
+# Väl Godkänt
 * Uppfyll kraven för [Godkänt](#godkänt)
 * Temat har minst fem (5) egentuvecklade funktioner som gynnar temat på något sätt
 * Temat utnyttjar Template Parts 
