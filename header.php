@@ -2,7 +2,7 @@
 <?php
 // Hämta locale inställningarna som är satta i WordPress
 ?>
-<html lang="<?php get_locale(); ?>">
+<html lang="<?php echo get_locale(); ?>">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
