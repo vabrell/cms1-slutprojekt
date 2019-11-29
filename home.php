@@ -45,11 +45,18 @@ get_header();
                   // Hämta författaren
                   echo get_the_author_posts_link();
                 ?>
-                &nbsp;@
+                &nbsp;@&nbsp;
                 <?php
-                  // Hämta datum
-                  echo get_the_date();
+                  // Hämta länk till datum arkiv
+                  $post_date = explode('-', get_the_date('Y-m-d'));
+                  $url = get_day_link($post_date[0], $post_date[1], $post_date[2]);
                 ?>
+                <a href="<?php echo $url; ?>">
+                  <?php
+                    // Hämta datum
+                    echo get_the_date();
+                  ?>
+                </a>
               </div>
               <div class="row">
                 <?php
