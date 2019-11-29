@@ -9,8 +9,6 @@
 function sp_load_styles() {
   // Ladda in bootstrap css
   wp_enqueue_style('bootstrap', trailingslashit(get_template_directory_uri()) . 'css/bootstrap.min.css');
-  // Ladda in slutprojekt css
-  wp_enqueue_style('slutprojekt', trailingslashit(get_template_directory_uri()) . 'css/slutprojekt.css');
 }
 // Kalla på funktionen för att ladda in css vid kroken wp_enqueue_scripts
 add_action('wp_enqueue_scripts', 'sp_load_styles');
