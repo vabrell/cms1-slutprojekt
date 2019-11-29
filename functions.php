@@ -92,10 +92,10 @@ function sp_get_nav_menu(string $location) {
   $children = [];
 
   // Lägg till start taggen för menyn
-  if ($location === 'primary') {
-    $menu_list = '<ul class="navbar-nav mr-auto">';
-  }else {
+  if ($location === 'social') {
     $menu_list = '<ul class="nav">';
+  }else {
+    $menu_list = '<ul class="navbar-nav mr-auto">';
   }
 
   // Lägg till meny innehållet i $menu_items om det finns något
