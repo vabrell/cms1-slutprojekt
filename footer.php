@@ -26,14 +26,24 @@
       </div>
 
       <div class="row justify-content-lg-center">
-        <div class="col-md-1">
+        <div class="col-md-2">
           <?php
           // Hämta navigations meny för plats secondary
           sp_get_nav_menu('secondary');
           ?>
         </div>
         <div class="col-md-4">
-          <!-- Karta -->
+          <h6><?php _e('Address', 'sp'); ?></h6>
+          <p>
+            <?php
+              // Hämta adressen från inställningarna
+              echo get_field('location_address', 'options');
+            ?>
+          </p>
+          <?php
+            // Hämta Leaflet kartan
+            echo do_shortcode(get_field('leaflet_map', 'options'));
+          ?>
         </div>
         <div class="col-md-2">
           <h6>

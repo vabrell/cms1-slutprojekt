@@ -8,7 +8,7 @@ Slutprojekt för CMS1, IT-Högskolan
 - [x] Använd Advanced Custom Fields för att göra allt innehåll (eller så mycket som möjligt) dynamiskt, dvs redigerbart från adminpanelen, exempelvis via en Options Page
 - [x] Utnyttja Repeatern i Advanced Custom Fields minst en gång
 - [x] Temat använder enqueue-funktionerna för att läsa in stylesheets och script-filer
-- [ ] Temat innehåller minst en lösning för navigering, positionering eller kartor. Detta kan göras via plugin.
+- [x] Temat innehåller minst en lösning för navigering, positionering eller kartor. Detta kan göras via plugin.
 - [ ] Temat märker upp alla sidor/inlägg med meta-taggar av typen Open Graph
 - [ ] Temat använder någon slags koppling till social-media, exempelvis like/share-länkar eller instagramflöde. Detta kan vara via plugin.
 - [ ] Installationen skall ha optimerats för SEO,  exempelvis med användning av Cache och SEO plugin
