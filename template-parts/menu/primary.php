@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow mb-5">
   <?php
     // Hämta länken till WordPress installationenen
   ?>
