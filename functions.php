@@ -9,6 +9,9 @@
 function sp_load_styles() {
   // Ladda in bootstrap css
   wp_enqueue_style('bootstrap', trailingslashit(get_template_directory_uri()) . 'css/bootstrap.min.css');
+  // Ladda in fontawesome css
+  wp_enqueue_style('fontawesome', trailingslashit(get_template_directory_uri()) . 'css/fontawesome.min.css');
+  wp_enqueue_style('fontawesome-brands', trailingslashit(get_template_directory_uri()) . 'css/brands.min.css');
 }
 // Kalla på funktionen för att ladda in css vid kroken wp_enqueue_scripts
 add_action('wp_enqueue_scripts', 'sp_load_styles');
@@ -44,6 +47,7 @@ function sp_register_menus() {
   // Registrera tema meny platser
   register_nav_menus([
     'primary' => __('Primary Menu', 'sp'),
+    'secondary' => __('Secondary Menu'),
     'social' => __('Social Media', 'sp')
   ]);
 }
@@ -88,7 +92,11 @@ function sp_get_nav_menu(string $location) {
   $children = [];
 
   // Lägg till start taggen för menyn
-  $menu_list = '<ul class="navbar-nav mr-auto">';
+  if ($location === 'primary') {
+    $menu_list = '<ul class="navbar-nav mr-auto">';
+  }else {
+    $menu_list = '<ul class="nav">';
+  }
 
   // Lägg till meny innehållet i $menu_items om det finns något
   if ($menu_items = wp_get_nav_menu_items($menu->term_id)) {
@@ -135,8 +143,13 @@ function sp_get_nav_menu(string $location) {
         }
         // Annars lägg till länken
         else {
+          $location === 'social'
+          ? $class = 'class="ml-2 mr-3"'
+          : $class = 'class="nav-link"';
+
           $menu_list .= '<li class="nav-item">';
-          $menu_list .= "<a class='nav-link' href='$url'>$title</a>";
+          $menu_list .= sp_get_social_media_icon($url);
+          $menu_list .= "<a $class href='$url'>$title</a>";
           $menu_list .= '</li>';
         }
       }
@@ -175,3 +188,36 @@ function sp_get_children(int $id, array $menu_items){
   return $children;
 }
 
+/**
+ * Get icon for social media
+ * 
+ * @param string $link
+ *  Link to check if and what social media it is
+ * 
+ * @return string $icon
+ *  Returns string of icon or an empty string
+ */
+function sp_get_social_media_icon(string $link) {
+  switch ($link) {
+    case (preg_match('/facebook/', $link) ? true : false):
+      $icon = '<i class="fab fa-facebook-square"></i>';
+      break;
+
+    case (preg_match('/instagram/', $link) ? true : false):
+      $icon = '<i class="fab fa-instagram"></i>';
+      break;
+
+    case (preg_match('/twitter/', $link) ? true : false):
+      $icon = '<i class="fab fa-twitter-square"></i>';
+      break;
+
+    case (preg_match('/pintrest/', $link) ? true : false):
+      $icon = '<i class="fab fa-pinterest-square"></i>';
+      break;
+
+    default:
+      $icon = '';
+  }
+
+  return $icon;
+}

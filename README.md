@@ -5,8 +5,8 @@ Slutprojekt för CMS1, IT-Högskolan
 - [ ] Bygg ett eget Wordpress-tema vars syfte/innehåll är helt valfritt
 - [ ] Temat innehar sidmallar för följande, samt minst två (2) unika sidmallar för Sidor;
   - [x] Startsida, blogg, inlägg, sidor, arkiv (månad, kategori, författare), sök, 404
-- [ ] Använd Advanced Custom Fields för att göra allt innehåll (eller så mycket som möjligt) dynamiskt, dvs redigerbart från adminpanelen, exempelvis via en Options Page
-- [ ] Utnyttja Repeatern i Advanced Custom Fields minst en gång
+- [x] Använd Advanced Custom Fields för att göra allt innehåll (eller så mycket som möjligt) dynamiskt, dvs redigerbart från adminpanelen, exempelvis via en Options Page
+- [x] Utnyttja Repeatern i Advanced Custom Fields minst en gång
 - [x] Temat använder enqueue-funktionerna för att läsa in stylesheets och script-filer
 - [ ] Temat innehåller minst en lösning för navigering, positionering eller kartor. Detta kan göras via plugin.
 - [ ] Temat märker upp alla sidor/inlägg med meta-taggar av typen Open Graph
