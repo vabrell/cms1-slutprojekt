@@ -31,6 +31,9 @@ add_action('wp_enqueue_scripts', 'sp_load_scripts');
 // Ladda in textdomänen
 load_theme_textdomain('sp');
 
+// Ladda in ACF metoder för temat
+require('functions/acf.php');
+
 /**
  * ********************
  * Theme menu locations
@@ -40,7 +43,8 @@ load_theme_textdomain('sp');
 function sp_register_menus() {
   // Registrera tema meny platser
   register_nav_menus([
-    'primary' => __('Primary Menu')
+    'primary' => __('Primary Menu', 'sp'),
+    'social' => __('Social Media', 'sp')
   ]);
 }
 // Kalla på funktionen för att ladda in tema meny platser vid korken after_setup_theme
@@ -72,9 +76,13 @@ add_theme_support('menus');
  */
 function sp_get_nav_menu(string $location) {
   // Hämta mall platsen
-  $theme_location = get_nav_menu_locations()[$location];
+  if (!array_key_exists($location, $theme_location = get_nav_menu_locations())) {
+    // Om inte platsen finns returnera
+    return;
+  }
+
   // Hämta menyn som är länkad till mall platsen
-  $menu = wp_get_nav_menu_object($theme_location);
+  $menu = wp_get_nav_menu_object($theme_location[$location]);
 
   // Skapa en lista för barn för att exkludera att de redan har lagts till
   $children = [];
