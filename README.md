@@ -2,7 +2,7 @@
 Slutprojekt för CMS1, IT-Högskolan
 
 # Godkänt
-[ ] Bygg ett eget Wordpress-tema vars syfte/innehåll är helt valfritt
+- [ ] Bygg ett eget Wordpress-tema vars syfte/innehåll är helt valfritt
 [ ] Temat innehar sidmallar för följande, samt minst två (2) unika sidmallar för Sidor;
   * Startsida, blogg, inlägg, sidor, arkiv (månad, kategori, författare), sök, 404
 [ ] Använd Advanced Custom Fields för att göra allt innehåll (eller så mycket som möjligt) dynamiskt, dvs redigerbart från adminpanelen, exempelvis via en Options Page
