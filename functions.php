@@ -28,6 +28,9 @@ function sp_load_scripts() {
 // Kalla på funktionen för att ladda in script vid kroken wp_enqueue_scripts
 add_action('wp_enqueue_scripts', 'sp_load_scripts');
 
+// Ladda in textdomänen
+load_theme_textdomain('sp');
+
 /**
  * ********************
  * Theme menu locations
