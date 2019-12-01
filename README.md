@@ -9,7 +9,7 @@ Slutprojekt för CMS1, IT-Högskolan
 - [x] Utnyttja Repeatern i Advanced Custom Fields minst en gång
 - [x] Temat använder enqueue-funktionerna för att läsa in stylesheets och script-filer
 - [x] Temat innehåller minst en lösning för navigering, positionering eller kartor. Detta kan göras via plugin.
-- [ ] Temat märker upp alla sidor/inlägg med meta-taggar av typen Open Graph
+- [x] Temat märker upp alla sidor/inlägg med meta-taggar av typen Open Graph
 - [ ] Temat använder någon slags koppling till social-media, exempelvis like/share-länkar eller instagramflöde. Detta kan vara via plugin.
 - [ ] Installationen skall ha optimerats för SEO,  exempelvis med användning av Cache och SEO plugin
 - [ ] All kod skall vara kommenterad, där skall även framgå vem som kommenterat

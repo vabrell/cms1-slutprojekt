@@ -221,3 +221,22 @@ function sp_get_social_media_icon(string $link) {
 
   return $icon;
 }
+
+/**
+ * Print out Open Graph tags
+ * 
+ * Use filter to change the tags
+ * 
+ */
+function sp_get_open_graph_tags($title = '', $image = '') {
+  // Sätt standardvärden om de inte är satta
+  empty($title) ? $title = get_bloginfo('name') : $title;
+  empty($image) ? $image = trailingslashit(get_template_directory_uri()) . 'img/logo.png' : $image;
+
+  // Skapa taggarna
+  $open_graphs = "<meta property='og:title' content='$title'>\n";
+  $open_graphs .= "  <meta property='og:image' content='$image'>\n";
+  
+  // Skriv ut taggarna
+  echo $open_graphs;
+}
