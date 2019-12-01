@@ -26,7 +26,7 @@
       </div>
 
       <div class="row justify-content-lg-center">
-        <div class="col-md-2">
+        <div class="col-md-4 col-lg-2">
           <?php
           // Hämta navigations meny för plats secondary
           sp_get_nav_menu('secondary');
@@ -45,7 +45,7 @@
             echo do_shortcode(get_field('leaflet_map', 'options'));
           ?>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-4 col-lg-2">
           <h6>
             <?php _e('Editors', 'sp'); ?>
           </h6>
