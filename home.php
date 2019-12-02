@@ -13,8 +13,8 @@ get_header();
       the_post();
       ?>
 
-      <div class="row mb-3">
-        <div class="col p-3 shadow">
+      <div class="row mb-5 p-3 shadow">
+        <div class="col-12">
           <h1>
             <?php
                 // Hämta länken till posten
@@ -26,6 +26,18 @@ get_header();
                   ?>
             </a>
           </h1>
+        </div>
+        <?php
+          // Kolla om det finns någon utvald bild
+          if (has_post_thumbnail()) {
+            ?>
+        <div class="col-3">
+          <img src="<?php echo get_the_post_thumbnail(); ?>">
+        </div>
+            <?php
+          }
+        ?>
+        <div class="col-9">
           <p class="lead p-2">
             <?php
                 // Kolla om inställningen säger att hela innehållet skall visas eller inte
@@ -38,29 +50,20 @@ get_header();
                 }
                 ?>
           </p>
+        </div>
+        <div class="col-12">
           <div class="bg-light text-muted small">
             <div class="container">
               <div class="row">
                 <?php
                   // Hämta författaren
-                  echo get_the_author_posts_link();
+                  echo __('Author', 'sp') . ':&nbsp;' . get_the_author_posts_link();
                 ?>
-                &nbsp;@&nbsp;
-                <?php
-                  // Hämta länk till datum arkiv
-                  $post_date = explode('-', get_the_date('Y-m-d'));
-                  $url = get_day_link($post_date[0], $post_date[1], $post_date[2]);
-                ?>
-                <a href="<?php echo $url; ?>">
-                  <?php
-                    // Hämta datum
-                    echo get_the_date();
-                  ?>
-                </a>
               </div>
               <div class="row">
                 <?php
                   // Hämta kategorier
+                  echo __('Category', 'sp') . ':&nbsp;';
                   the_category(', ');
                 ?>
               </div>

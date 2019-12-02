@@ -16,9 +16,9 @@ get_header();
         <div class="col">
           <h1>
             <?php
-                // Hämta titeln på posten
-                echo get_the_title();
-                ?>
+              // Hämta titeln på posten
+              echo get_the_title();
+            ?>
           </h1>
         </div>
       </div>
@@ -26,13 +26,13 @@ get_header();
         <?php
           // Kolla om det finns någon utvald bild
           if (has_post_thumbnail()) {
-            ?>
+        ?>
 
         <div class="col-3">
           <img class="img-fluid" src="<?php echo get_the_post_thumbnail_url(); ?>">
         </div>
 
-            <?php
+        <?php
           }
         ?>
         <div class="col-9 p-3">
@@ -41,36 +41,25 @@ get_header();
             <div class="container-fluid">
               <div class="row">
                 <?php
-                    // Hämta författaren
-                    echo get_the_author_posts_link();
-                    ?>
-                &nbsp;@&nbsp;
-                <?php
-                    // Hämta länk till datum arkiv
-                    $post_date = explode('-', get_the_date('Y-m-d'));
-                    $url = get_day_link($post_date[0], $post_date[1], $post_date[2]);
-                    ?>
-                <a href="<?php echo $url; ?>">
-                  <?php
-                      // Hämta datum
-                      echo get_the_date();
-                      ?>
-                </a>
+                  // Hämta författaren
+                  echo __('Author', 'sp') . ':&nbsp;' . get_the_author_posts_link();
+                ?>
               </div>
               <div class="row">
                 <?php
-                    // Hämta kategorier
-                    the_category(', ');
-                    ?>
+                  // Hämta kategorier
+                  echo __('Category', 'sp') . ':&nbsp;';
+                  the_category(', ');
+                ?>
               </div>
             </div>
           </div>
 
           <div class="p-2">
             <?php
-                // Hämta innehållet på posten
-                the_content();
-                ?>
+              // Hämta innehållet på posten
+              the_content();
+            ?>
           </div>
 
         </div>
