@@ -81,7 +81,6 @@ function sp_add_post_types() {
       ],
       'supports' => [
         'title',
-        'editor',
         'comments',
         'revisions',
         'author',
