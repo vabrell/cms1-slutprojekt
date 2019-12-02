@@ -12,7 +12,8 @@ Slutprojekt för CMS1, IT-Högskolan
 - [x] Temat märker upp alla sidor/inlägg med meta-taggar av typen Open Graph
 - [x] Temat använder någon slags koppling till social-media, exempelvis like/share-länkar eller instagramflöde. Detta kan vara via plugin.
   * Ultimate Social Media Icons (plugin)
-- [ ] Installationen skall ha optimerats för SEO,  exempelvis med användning av Cache och SEO plugin
+- [x] Installationen skall ha optimerats för SEO,  exempelvis med användning av Cache och SEO plugin
+  * Yoast SEO (plugin)
 - [ ] All kod skall vara kommenterad, där skall även framgå vem som kommenterat
 - [ ] En individuell arbetslog skall föras, där varje dags arbete summeras kort igenom:
   * Vad som åstadkommits
