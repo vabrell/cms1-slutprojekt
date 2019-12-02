@@ -62,6 +62,7 @@ add_action('after_setup_theme', 'sp_register_menus');
 
 //  Tillåt att skapa menyer
 add_theme_support('menus');
+add_theme_support('post-thumbnails');
 
 /**
  * ***************
