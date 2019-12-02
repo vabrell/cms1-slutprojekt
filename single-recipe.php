@@ -135,6 +135,8 @@ get_header();
                   }
 
                 }
+                // Hämta innehållet för att få med knapparna för att dela på sociala medier
+                the_content();
               }
               ?>
         </div>
