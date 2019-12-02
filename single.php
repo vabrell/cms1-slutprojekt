@@ -12,20 +12,31 @@ get_header();
       // Välj posten och ta bort den ur listan
       the_post();
       ?>
-
-      <div class="row mb-3">
-        <div class="col p-3">
+      <div class="row">
+        <div class="col">
           <h1>
             <?php
-                // Hämta länken till posten
+                // Hämta titeln på posten
+                echo get_the_title();
                 ?>
-            <a href="<?php echo get_the_permalink(); ?>">
-              <?php
-                  // Hämta titeln på posten
-                  echo get_the_title();
-                  ?>
-            </a>
           </h1>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <?php
+          // Kolla om det finns någon utvald bild
+          if (has_post_thumbnail()) {
+            ?>
+
+        <div class="col-3">
+          <img class="img-fluid" src="<?php echo get_the_post_thumbnail_url(); ?>">
+        </div>
+
+            <?php
+          }
+        ?>
+        <div class="col-auto p-3">
+
           <div class="bg-light text-muted small">
             <div class="container-fluid">
               <div class="row">
@@ -57,9 +68,9 @@ get_header();
 
           <div class="p-2">
             <?php
-              // Hämta innehållet på posten
-              the_content();
-            ?>
+                // Hämta innehållet på posten
+                the_content();
+                ?>
           </div>
 
         </div>
