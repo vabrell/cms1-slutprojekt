@@ -13,7 +13,7 @@ get_header();
         the_post();
 
         // Skriv ut allt innehåll
-        the_content();
+        echo get_the_content();
       }
     }
   ?>

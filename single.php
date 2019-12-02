@@ -58,7 +58,7 @@ get_header();
           <div class="p-2">
             <?php
               // Hämta innehållet på posten
-              echo get_the_content();
+              the_content();
             ?>
           </div>
 
