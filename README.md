@@ -27,6 +27,6 @@ Alternativt kan länk till git-repo få ersätta loggen, commit-meddelanden skal
 - [ ] Uppfyll kraven för [Godkänt](#godkänt)
 - [ ] Temat har minst fem (5) egentuvecklade funktioner som gynnar temat på något sätt
 - [x] Temat utnyttjar Template Parts 
-- [ ] Temat utnyttjar Custom Post Types för valfritt syfte
+- [x] Temat utnyttjar Custom Post Types för valfritt syfte
 - [ ] Temat utnyttjar effektiv ACF Flexibelt innehåll på minst tre ställen
 - [ ] Alla strängar som visas för användare skall vara på engelska och översättningsbara.

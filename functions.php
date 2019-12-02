@@ -38,6 +38,109 @@ load_theme_textdomain('sp');
 require('functions/acf.php');
 
 /**
+ * ***********************
+ * Theme custom post types
+ * ***********************
+ */
+
+function sp_add_post_types() {
+  // Registrera egna post typer
+  register_post_type(
+    'recipe',
+    [
+      'labels' => [
+        'name' => __('Recipes', 'sp'),
+        'singular_name' => __('Recipe', 'sp'),
+        'add_new' => __('Add New Recipe', 'sp'),
+        'add_new_item' => __('Add New Recipe', 'sp'),
+        'edit_item' => __('Edit Recipe', 'sp'),
+        'new_item' => __('New Recipe', 'sp'),
+        'view_item' => __('View Recipe', 'sp'),
+        'view_items' => __('View Recipes', 'sp'),
+        'search_items' => __('Search Recipes', 'sp'),
+        'not_found' => __('No recipes found', 'sp'),
+        'not_found_in_trash' => __('No recipes found in Trash', 'sp'),
+        'all_items' => __('All Recipes', 'sp'),
+        'featured_image' => __('Recipe Image', 'sp'),
+        'set_featured_image' => __('Set recipe image', 'sp'),
+        'remove_featured_image' => __('Remove recipe image', 'sp'),
+        'use_featured_image' => __('Use as recipe image', 'sp'),
+        'filter_items_list' => __('Filter recipes list', 'sp'),
+        'items_list_navigation' => __('Recipes list', 'sp'),
+        'item_published' => __('Recipe published', 'sp'),
+        'item_published_privately' => __('Recipe published privately', 'sp'),
+        'item_reverted_to_draft' => __('Recipe reverted to draft', 'sp'),
+        'item_scheduled' => __('Recipe scheduled', 'sp'),
+        'item_updated' => __('Recipe updated', 'sp'),
+      ],
+      'description' => __('Recipes of food, desserts and other yummy things', 'sp'),
+      'public' => true,
+      'menu_icon' => 'dashicons-editor-ol',
+      'taxonomies' => [
+        'meal'
+      ],
+      'supports' => [
+        'title',
+        'editor',
+        'comments',
+        'revisions',
+        'author',
+        'excerpt',
+        'thumbnail'
+      ],
+      'has_archive' => true,
+      'rewrite' => true,
+      'show_in_rest' => true
+    ]
+  );
+}
+// Kalla på funktionen för att lägga till egna post typer vid kroken init
+add_action('init', 'sp_add_post_types');
+
+/**
+ * ***********************
+ * Theme custom post types
+ * ***********************
+ */
+
+function sp_add_taxonimies()
+{
+  // Registrera egna post typer
+  register_taxonomy(
+    'meal',
+    'recipe',
+    [
+      'labels' => [
+        'name' => __('Mealtimes', 'sp'),
+        'singular_name' => __('Mealtime', 'sp'),
+        'search_items' => __('Search Mealtimes', 'sp'),
+        'popular_items' => __('Popular Mealtimes', 'sp'),
+        'edit_item' => __('Edit Mealtime', 'sp'),
+        'view_item' => __('View Mealtime', 'sp'),
+        'update_item' => __('Update Mealtimes', 'sp'),
+        'add_new_item' => __('Add New Mealtime', 'sp'),
+        'new_item_name' => __('New Mealtime Name', 'sp'),
+        'separate_items_with_commas' => __('Separate mealtimes with commas', 'sp'),
+        'add_or_remove_items' => __('Add or remove mealtimes', 'sp'),
+        'choose_from_most_used' => __('Choose from the most used mealtime', 'sp'),
+        'not_found' => __('No mealtimes found', 'sp'),
+        'no_terms' => __('No mealtimes', 'sp'),
+        'items_list_navigation' => __('Mealtimes list', 'sp'),
+        'items_list' => __('Mealtimes list', 'sp'),
+        'back_to_items' => __('Mealtime have been updated', 'sp'),
+      ],
+      'description' => __('Types of meals you can have', 'sp'),
+      'public' => true,
+      'has_archive' => true,
+      'rewrite' => true,
+      'show_in_rest' => true
+    ]
+  );
+}
+// Kalla på funktionen för att lägga till egna post typer vid kroken init
+add_action('init', 'sp_add_taxonimies');
+
+/**
  * ********************
  * Theme menu locations
  * ********************
@@ -226,10 +329,15 @@ function sp_get_social_media_icon(string $link) {
 /**
  * Print out Open Graph tags
  * 
- * Use filter to change the tags
+ * @param string $title
+ *  The title of the post
+ * 
+ * @param string $image
+ * 
+ * @return echo Open Graph Tags
  * 
  */
-function sp_get_open_graph_tags($title = '', $image = '') {
+function sp_get_open_graph_tags(string $title = '', string $image = '') {
   // Sätt standardvärden om de inte är satta
   empty($title) ? $title = get_bloginfo('name') : $title;
   empty($image) ? $image = trailingslashit(get_template_directory_uri()) . 'img/logo.png' : $image;
