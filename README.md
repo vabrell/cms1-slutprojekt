@@ -2,7 +2,8 @@
 Slutprojekt för CMS1, IT-Högskolan
 
 # Godkänt
-- [ ] Bygg ett eget Wordpress-tema vars syfte/innehåll är helt valfritt
+- [x] Bygg ett eget Wordpress-tema vars syfte/innehåll är helt valfritt
+  * Sida med recept och blogginlägg
 - [ ] Temat innehar sidmallar för följande, samt minst två (2) unika sidmallar för Sidor;
   - [x] Startsida, blogg, inlägg, sidor, arkiv (månad, kategori, författare), sök, 404
 - [x] Använd Advanced Custom Fields för att göra allt innehåll (eller så mycket som möjligt) dynamiskt, dvs redigerbart från adminpanelen, exempelvis via en Options Page
@@ -14,8 +15,8 @@ Slutprojekt för CMS1, IT-Högskolan
   * Ultimate Social Media Icons (plugin)
 - [x] Installationen skall ha optimerats för SEO,  exempelvis med användning av Cache och SEO plugin
   * Yoast SEO (plugin)
-- [ ] All kod skall vara kommenterad, där skall även framgå vem som kommenterat
-- [ ] En individuell arbetslog skall föras, där varje dags arbete summeras kort igenom:
+- [x] All kod skall vara kommenterad, där skall även framgå vem som kommenterat
+- [x] En individuell arbetslog skall föras, där varje dags arbete summeras kort igenom:
   * Vad som åstadkommits
   * Vad som har krånglat
   * Vad som är nästa steg
@@ -30,3 +31,9 @@ Alternativt kan länk till git-repo få ersätta loggen, commit-meddelanden skal
 - [x] Temat utnyttjar Custom Post Types för valfritt syfte
 - [ ] Temat utnyttjar effektiv ACF Flexibelt innehåll på minst tre ställen
 - [ ] Alla strängar som visas för användare skall vara på engelska och översättningsbara.
+
+# TODO
+* Skapa funktion för att skriva ut PAGINATION
+* Hitta två ställen till att implementera ACF flex
+* Översätt för textdomänen
+* Lägg till innehåll
