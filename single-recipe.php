@@ -105,7 +105,7 @@ get_header();
                         $volume_type = get_sub_field('volume_type');
                         $ingredient = get_sub_field('ingredient');
 
-                        echo "<li>$volume$volume_type $ingredient</li>";
+                        echo "<li>$volume $volume_type $ingredient</li>";
                         
                       }
 
