@@ -86,7 +86,6 @@ function sp_add_post_types() {
       ],
       'supports' => [
         'title',
-        'comments',
         'revisions',
         'excerpt',
         'thumbnail'
