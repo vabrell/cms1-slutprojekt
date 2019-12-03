@@ -1,17 +1,6 @@
 <?php
 // Hämta header.php
 get_header();
-
-// Hämta endast inlägg och recept
-// Får se om detta går att lösa
-
-// query_posts([
-//   'post_type' => [
-//     'post',
-//     'recipe'
-//   ],
-//   // 'paged' => $paged
-// ]);
 ?>
 
 <div class="container">

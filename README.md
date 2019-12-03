@@ -44,4 +44,4 @@ Alternativt kan länk till git-repo få ersätta loggen, commit-meddelanden skal
 * Sidmall för Om Oss
 * Översätt för textdomänen
 * Lägg till innehåll
-* Kolla på fel med pagination (författare)
+* ~~Kolla på fel med pagination (författare)~~

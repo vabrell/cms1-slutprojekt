@@ -97,6 +97,15 @@ function sp_add_post_types() {
 // Kalla på funktionen för att lägga till egna post typer vid kroken init
 add_action('init', 'sp_add_post_types');
 
+// Fix för att få med recepten på arkiv sidan för författare
+function sp_post_author_archive($query)
+{
+  if ($query->is_author)
+    $query->set('post_type', array('recipe', 'post'));
+  remove_action('pre_get_posts', 'sp_post_author_archive');
+}
+add_action('pre_get_posts', 'sp_post_author_archive');
+
 /**
  * ***********************
  * Theme custom post types
