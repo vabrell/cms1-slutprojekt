@@ -13,6 +13,12 @@ query_posts([
 ?>
 
 <div class="container">
+  <h1 class="text-white text-center">
+    <?php
+      // Skriv ut det man sökt på
+      echo __('Search results for') . ': ' . get_search_query();
+    ?>
+  </h1>
   <?php
   // Kolla om det finns någon post i databasen att hämta
   if (have_posts()) {
@@ -58,17 +64,27 @@ query_posts([
         <div class="col-12">
           <div class="bg-light text-muted small">
             <div class="container">
-              <div class="row">
-                <?php
-                  // Hämta författaren
-                  echo get_the_author_posts_link();
-                ?>
+             <div class="row">
+                  <?php
+                      echo __('Author', 'sp') . ':&nbsp;';
+                      // Hämta författaren
+                      echo get_the_author_posts_link();
+                      ?>
               </div>
               <div class="row">
                 <?php
-                // Hämta kategorier
-                the_category(', ');
-                ?>
+                    // Hämta kategorier
+                    if (count(get_the_category()) > 0) {
+                      echo __('Category', 'sp') . ':&nbsp;';
+                      the_category(', ');
+                    }
+
+                    // Hämta måltider
+                    if (has_term('', 'meal')) {
+                      echo __('Mealtime', 'sp') . ':&nbsp;';
+                      the_terms(get_the_ID(), 'meal');
+                    }
+                    ?>
               </div>
             </div>
           </div>

@@ -37,14 +37,12 @@ Alternativt kan länk till git-repo få ersätta loggen, commit-meddelanden skal
   * Recept
   * Senaste inlägg/recept
   * Medarbetare
-- [ ] Alla strängar som visas för användare skall vara på engelska och översättningsbara.
+- [x] Alla strängar som visas för användare skall vara på engelska och översättningsbara.
 
 # TODO
 * ~~Skapa funktion för att skriva ut PAGINATION~~
 * ~~Hitta två ställen till att implementera ACF flex~~
-  * Senaste inlägg/recept
-  * Medarbetare
 * ~~Sidmall för Om Oss~~
-* Översätt för textdomänen
+* ~~Översätt för textdomänen~~
 * Lägg till innehåll
 * ~~Kolla på fel med pagination (författare)~~

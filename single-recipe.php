@@ -41,16 +41,16 @@ get_header();
             <div class="container-fluid">
               <div class="row">
                 <?php
-                  _e('Author:', 'sp');
-                    echo "&nbsp;";
+                  _e('Author', 'sp');
+                    echo ":&nbsp;";
                   // Hämta författaren
                   echo get_the_author_posts_link();
                 ?>
               </div>
               <div class="row">
                 <?php
-                    _e('Mealtime:', 'sp');
-                    echo "&nbsp;";
+                    _e('Mealtime', 'sp');
+                    echo ":&nbsp;";
                     // Hämta kategorier
                     the_terms(get_the_ID(), 'meal');
                     ?>

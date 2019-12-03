@@ -34,7 +34,10 @@ function sp_load_scripts() {
 add_action('wp_enqueue_scripts', 'sp_load_scripts');
 
 // Ladda in textdomänen
-load_theme_textdomain('sp');
+function sp_load_text_domain() {
+  load_theme_textdomain('sp', trailingslashit(get_template_directory()) . '/languages');
+}
+add_action('after_setup_theme', 'sp_load_text_domain');
 
 // Ladda in ACF metoder för temat
 require('functions/acf.php');
@@ -159,7 +162,7 @@ function sp_register_menus() {
   // Registrera tema meny platser
   register_nav_menus([
     'primary' => __('Primary Menu', 'sp'),
-    'secondary' => __('Secondary Menu'),
+    'secondary' => __('Secondary Menu', 'sp'),
     'social' => __('Social Media', 'sp')
   ]);
 }

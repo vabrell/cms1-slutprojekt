@@ -1,0 +1,249 @@
+#: 404.php:9
+msgid "The page could not be found"
+msgstr "Sidan kunde inte hittas"
+
+#: archive.php:60
+#: author.php:60
+#: home.php:60
+#: search.php:69
+#: single-recipe.php:44
+#: single.php:45
+#: template-recipes.php:69
+msgid "Author"
+msgstr "Författare"
+
+#: archive.php:69
+#: auhtor.php:69
+#: home.php:66
+#: search.php:78
+#: single.php:51
+msgid "Category"
+msgstr "Kategori"
+
+#: archive.php:75
+#: author.php:75
+#: functions.php:124
+#: search.php:84
+#: single-recipe.php:52
+#: template-recipes.php:77
+msgid "Mealtime"
+msgstr "Måltid"
+
+#: footer.php:36
+msgid "Address"
+msgstr "Adress"
+
+#: footer.php:106
+msgid "E-mail"
+msgstr "E-post"
+
+#: footer.php:108
+msgid "Send"
+msgstr "Skicka"
+
+#: functions.php:54
+msgid "Recipes"
+msgstr "Recept"
+
+#: functions.php:55
+msgid "Recipe"
+msgstr "Recept"
+
+#: functions.php:56
+#: functions.php:57
+msgid "Add New Recipe"
+msgstr "Lägg till nytt recept"
+
+#: functions.php:58
+msgid "Edit Recipe"
+msgstr "Modifiera recept"
+
+#: functions.php:59
+msgid "New Recipe"
+msgstr "Nytt Recept"
+
+#: functions.php:60
+msgid "View Recipe"
+msgstr "Visa Recept"
+
+#: functions.php:61
+msgid "View Recipes"
+msgstr "Visa Recept"
+
+#: functions.php:62
+msgid "Search Recipes"
+msgstr "Sök Recept"
+
+#: functions.php:63
+msgid "No recipes found"
+msgstr "Inga recept hittades"
+
+#: functions.php:64
+msgid "No recipes found in Trash"
+msgstr "Inga recept hittades i Papperskorgen"
+
+#: functions.php:65
+msgid "All Recipes"
+msgstr "Alla Recept"
+
+#: functions.php:66
+msgid "Recipe Image"
+msgstr "Recept bild"
+
+#: functions.php:67
+msgid "Set recipe image"
+msgstr "Välj recept bild"
+
+#: functions.php:68
+msgid "Remove recipe image"
+msgstr "Ta bort recept bild"
+
+#: functions.php:69
+msgid "Use as recipe image"
+msgstr "Använd som recept bild"
+
+#: functions.php:70
+msgid "Filter recipes list"
+msgstr "Filtrera recept lista"
+
+#: functions.php:71
+msgid "Recipes list"
+msgstr "Recept lista"
+
+#: functions.php:72
+msgid "Recipe published"
+msgstr "Recept publiserat"
+
+#: functions.php:73
+msgid "Recipe published privately"
+msgstr "Recept publiserat privat"
+
+#: functions.php:74
+msgid "Recipe reverted to draft"
+msgstr "Recept ändrades tillbaka till utkast"
+
+#: functions.php:75
+msgid "Recipe scheduled"
+msgstr "Recept planerat"
+
+#: functions.php:76
+msgid "Recipe updated"
+msgstr "Recept uppdaterad"
+
+#: functions.php:78
+msgid "Recipes of food, desserts and other yummy things"
+msgstr "Recept för mat, efterrätter och andra goda saker"
+
+#: functions.php:123
+msgid "Mealtimes"
+msgstr "Måltider"
+
+#: functions.php:125
+msgid "Search Mealtimes"
+msgstr "Sök måltider"
+
+#: functions.php:126
+msgid "Popular Mealtimes"
+msgstr "Populära måltider"
+
+#: functions.php:127
+msgid "Edit Mealtime"
+msgstr "Modifera måltid"
+
+#: functions.php:128
+msgid "View Mealtime"
+msgstr "Visa måltid"
+
+#: functions.php:129
+msgid "Update Mealtimes"
+msgstr "Uppdatera måltid"
+
+#: functions.php:130
+msgid "Add New Mealtime"
+msgstr "Lägg till ny måltid"
+
+#: functions.php:131
+msgid "New Mealtime Name"
+msgstr "Nytt måltids namn"
+
+#: functions.php:132
+msgid "Separate mealtimes with commas"
+msgstr "Separera måltider med komma"
+
+#: functions.php:133
+msgid "Add or remove mealtimes"
+msgstr "Lägg till eller ta bort måltider"
+
+#: functions.php:134
+msgid "Choose from the most used mealtime"
+msgstr "Välj bland de mest använda måltiderna"
+
+#: functions.php:135
+msgid "No mealtimes found"
+msgstr "Inga måltider hittades"
+
+#: functions.php:136
+msgid "No mealtimes"
+msgstr "Inga måltider"
+
+#: functions.php:137
+#: functions.php:138
+msgid "Mealtimes list"
+msgstr "Måltider lista"
+
+#: functions.php:139
+msgid "Mealtime have been updated"
+msgstr "Måltid har uppdaterats"
+
+#: functions.php:141
+msgid "Types of meals you can have"
+msgstr "Varianter av måltider man kan ha"
+
+#: functions.php:161
+msgid "Primary Menu"
+msgstr "Primär Meny"
+
+#: functions.php:162
+msgid "Secondary Menu"
+msgstr "Sekundär Meny"
+
+#: functions.php:163
+msgid "Social Media"
+msgstr "Social Media"
+
+#: functions.php:394
+msgid "Previous"
+msgstr "Föregående"
+
+#: functions.php:430
+msgid "Next"
+msgstr "Nästa"
+
+#: search.php:19
+msgid "Search results for"
+msgstr "Sökresultat för"
+
+#: searchform.php:4
+#: searchform.php:5
+msgid "Search"
+msgstr "Sök"
+
+#: single-recipe.php:85
+msgid "Ingredients"
+msgstr "Ingredienser"
+
+#: single-recipe.php:109
+msgid "Instructions"
+msgstr "Instruktioner"
+
+#: template-aboutus.php:29
+msgid "About us"
+msgstr "Om oss"
+
+#: template-parts/acf/latest.php:26
+msgid "Latest posts"
+msgstr "Senaste inläggen"
+
+#: template-parts/acf/latest.php:92
+msgid "Latest recipes"
+msgstr "Senaste recepten"

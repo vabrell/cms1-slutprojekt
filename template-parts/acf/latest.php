@@ -22,48 +22,50 @@ if (have_rows('latest')) {
         ?>
         <div class="row p-3 justify-content-between">
           <div class="col-12">
-            <h2 class="text-center p-2 rounded text-white m-2">Senaste inläggen</h2>
+            <h2 class="text-center p-2 rounded text-white m-2">
+              <?php _e('Latest posts', 'sp'); ?>
+            </h2>
           </div>
           <?php
-                  while ($posts->have_posts()) {
-                    // Hämta posten och ta bort den ur listan
-                    $posts->the_post();
-                    ?>
+          while ($posts->have_posts()) {
+            // Hämta posten och ta bort den ur listan
+            $posts->the_post();
+            ?>
             <div class="col-lg-5 mb-5 p-4 shadow bg-white rounded">
               <div class="row">
                 <div class="col-12">
                   <a href="<?php echo get_the_permalink(); ?>">
                     <?php
-                              // Hämta titeln på inlägget
-                              echo '<h1>' . get_the_title() . '</h1>';
-                              ?>
+                    // Hämta titeln på inlägget
+                    echo '<h1>' . get_the_title() . '</h1>';
+                    ?>
                   </a>
                 </div>
 
                 <?php
-                          // Om det finns en utvald bild, visa den
-                          if (has_post_thumbnail()) {
-                            ?>
+                // Om det finns en utvald bild, visa den
+                if (has_post_thumbnail()) {
+                  ?>
 
                   <div class="col-4">
                     <img src="<?php echo get_the_post_thumbnail_url(); ?>">
                   </div>
 
                 <?php
-                          }
-                          ?>
+                }
+                ?>
 
                 <div class="col-8">
                   <?php
-                            // Hämta beskrivningen av inlägget
-                            echo get_the_excerpt();
-                            ?>
+                  // Hämta beskrivningen av inlägget
+                  echo get_the_excerpt();
+                  ?>
                 </div>
               </div>
             </div>
           <?php
-                  }
-                  ?>
+          }
+          ?>
         </div>
       <?php
             }
@@ -86,49 +88,51 @@ if (have_rows('latest')) {
               ?>
         <div class="row p-3 justify-content-between">
           <div class="col-12">
-            <h2 class="text-center p-2 rounded text-white m-2">Senaste recepten</h2>
+            <h2 class="text-center p-2 rounded text-white m-2">
+              <?php _e('Latest recipes', 'sp'); ?>
+            </h2>
           </div>
 
           <?php
-                  while ($recipes->have_posts()) {
-                    // Hämta receptet och ta bort den ur listan
-                    $recipes->the_post();
-                    ?>
+          while ($recipes->have_posts()) {
+            // Hämta receptet och ta bort den ur listan
+            $recipes->the_post();
+            ?>
             <div class="col-lg-5 mb-5 p-4 shadow bg-white rounded">
               <div class="row">
                 <div class="col-12">
                   <a href="<?php echo get_the_permalink(); ?>">
                     <?php
-                              // Hämta titeln på receptet
-                              echo '<h4>' . get_the_title() . '</h4>';
-                              ?>
+                    // Hämta titeln på receptet
+                    echo '<h4>' . get_the_title() . '</h4>';
+                    ?>
                   </a>
                 </div>
 
                 <?php
-                          // Om det finns en utvald bild, visa den
-                          if (has_post_thumbnail()) {
-                            ?>
+                // Om det finns en utvald bild, visa den
+                if (has_post_thumbnail()) {
+                  ?>
 
                   <div class="col-4">
                     <img class="img-fluid" src="<?php echo get_the_post_thumbnail_url(); ?>">
                   </div>
 
                 <?php
-                          }
-                          ?>
+                }
+                ?>
 
                 <div class="col-8">
                   <?php
-                            // Hämta beskrivningen av receptet
-                            echo get_the_excerpt();
-                            ?>
+                  // Hämta beskrivningen av receptet
+                  echo get_the_excerpt();
+                  ?>
                 </div>
               </div>
             </div>
           <?php
-                  }
-                  ?>
+          }
+          ?>
         </div>
 <?php
       }
