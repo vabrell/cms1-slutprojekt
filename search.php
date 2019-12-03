@@ -7,7 +7,8 @@ query_posts([
     'post',
     'recipe'
   ],
-  'paged' => $paged
+  'paged' => $paged,
+  's' => $s
 ]);
 ?>
 
