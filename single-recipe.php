@@ -3,7 +3,7 @@
 get_header();
 ?>
 
-<div class="container-fluid">
+<div class="container bg-white mb-5 p-4 rounded">
   <?php
   // Kolla om det finns någon post i databasen att hämta
   if (have_posts()) {
@@ -14,7 +14,7 @@ get_header();
       ?>
       <div class="row">
         <div class="col">
-          <h1>
+          <h1 class="text-primary">
             <?php
                 // Hämta titeln på posten
                 echo get_the_title();
@@ -41,6 +41,8 @@ get_header();
             <div class="container-fluid">
               <div class="row">
                 <?php
+                  _e('Author:', 'sp');
+                    echo "&nbsp;";
                   // Hämta författaren
                   echo get_the_author_posts_link();
                 ?>
