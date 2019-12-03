@@ -4,9 +4,10 @@ Slutprojekt för CMS1, IT-Högskolan
 # Godkänt
 - [x] Bygg ett eget Wordpress-tema vars syfte/innehåll är helt valfritt
   * Sida med recept och blogginlägg
-- [ ] Temat innehar sidmallar för följande, samt minst två (2) unika sidmallar för Sidor;
+- [x] Temat innehar sidmallar för följande, samt minst två (2) unika sidmallar för Sidor;
   - [x] Startsida, blogg, inlägg, sidor, arkiv (månad, kategori, författare), sök, 404
   * template-recipes
+  * template-aboutus
 - [x] Använd Advanced Custom Fields för att göra allt innehåll (eller så mycket som möjligt) dynamiskt, dvs redigerbart från adminpanelen, exempelvis via en Options Page
 - [x] Utnyttja Repeatern i Advanced Custom Fields minst en gång
   * Användas i recept
@@ -28,20 +29,22 @@ Loggarna lämnas in tillsammans med inlämningen.
 Alternativt kan länk till git-repo få ersätta loggen, commit-meddelanden skall då vara beskrivande.
 
 # Väl Godkänt
-- [ ] Uppfyll kraven för [Godkänt](#godkänt)
+- [x] Uppfyll kraven för [Godkänt](#godkänt)
 - [x] Temat har minst fem (5) egentuvecklade funktioner som gynnar temat på något sätt
 - [x] Temat utnyttjar Template Parts 
 - [x] Temat utnyttjar Custom Post Types för valfritt syfte
 - [ ] Temat utnyttjar effektiv ACF Flexibelt innehåll på minst tre ställen
   * Recept
   * Senaste inlägg/recept
+  * Medarbetare
 - [ ] Alla strängar som visas för användare skall vara på engelska och översättningsbara.
 
 # TODO
 * ~~Skapa funktion för att skriva ut PAGINATION~~
-* Hitta två ställen till att implementera ACF flex
+* ~~Hitta två ställen till att implementera ACF flex~~
   * Senaste inlägg/recept
-* Sidmall för Om Oss
+  * Medarbetare
+* ~~Sidmall för Om Oss~~
 * Översätt för textdomänen
 * Lägg till innehåll
 * ~~Kolla på fel med pagination (författare)~~
