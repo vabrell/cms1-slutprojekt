@@ -14,8 +14,11 @@ get_header();
 
         // Skriv ut allt innehåll
         echo get_the_content();
+
       }
     }
+    // Hämta mall del för senaste innehåll
+    get_template_part('template-parts/acf/latest');
   ?>
 </div>
 

@@ -6,10 +6,13 @@ Slutprojekt för CMS1, IT-Högskolan
   * Sida med recept och blogginlägg
 - [ ] Temat innehar sidmallar för följande, samt minst två (2) unika sidmallar för Sidor;
   - [x] Startsida, blogg, inlägg, sidor, arkiv (månad, kategori, författare), sök, 404
+  * template-recipes
 - [x] Använd Advanced Custom Fields för att göra allt innehåll (eller så mycket som möjligt) dynamiskt, dvs redigerbart från adminpanelen, exempelvis via en Options Page
 - [x] Utnyttja Repeatern i Advanced Custom Fields minst en gång
+  * Användas i recept
 - [x] Temat använder enqueue-funktionerna för att läsa in stylesheets och script-filer
 - [x] Temat innehåller minst en lösning för navigering, positionering eller kartor. Detta kan göras via plugin.
+  * Görs med plugin Leaflet
 - [x] Temat märker upp alla sidor/inlägg med meta-taggar av typen Open Graph
 - [x] Temat använder någon slags koppling till social-media, exempelvis like/share-länkar eller instagramflöde. Detta kan vara via plugin.
   * Ultimate Social Media Icons (plugin)
@@ -30,10 +33,13 @@ Alternativt kan länk till git-repo få ersätta loggen, commit-meddelanden skal
 - [x] Temat utnyttjar Template Parts 
 - [x] Temat utnyttjar Custom Post Types för valfritt syfte
 - [ ] Temat utnyttjar effektiv ACF Flexibelt innehåll på minst tre ställen
+  * Recept
+  * Senaste inlägg/recept
 - [ ] Alla strängar som visas för användare skall vara på engelska och översättningsbara.
 
 # TODO
 * Skapa funktion för att skriva ut PAGINATION
 * Hitta två ställen till att implementera ACF flex
+  * Senaste inlägg/recept
 * Översätt för textdomänen
 * Lägg till innehåll
