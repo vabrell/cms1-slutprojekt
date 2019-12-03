@@ -2,21 +2,20 @@
 // Hämta header.php
 get_header();
 
-// Hämta den globala datan för författaren
-global $authordata;
-if (!is_object($authordata)) {
-  return '';
-}
+// Hämta endast inlägg och recept
+// Får se om detta går att lösa
 
-$auhtor_posts = new WP_query([
-  'post_type' => ['post', 'recipe'],
-  'author' => $authordata->ID,
-  'paged' => $paged
-]);
+// query_posts([
+//   'post_type' => [
+//     'post',
+//     'recipe'
+//   ],
+//   // 'paged' => $paged
+// ]);
 ?>
 
 <div class="container">
-  <h1>
+  <h1 class="text-center p-2 rounded text-white m-5">
     <?php
     // Hämta titeln för vilket arkiv det är
     echo get_the_archive_title();
@@ -24,14 +23,14 @@ $auhtor_posts = new WP_query([
   </h1>
   <?php
   // Kolla om det finns någon post i databasen att hämta
-  if ($auhtor_posts->have_posts()) {
+  if (have_posts()) {
     // Medans det finns poster i databasen loopa igenom dem
-    while ($auhtor_posts->have_posts()) {
+    while (have_posts()) {
       // Välj posten och ta bort den ur listan
-      $auhtor_posts->the_post();
+      the_post();
       ?>
 
-      <div class="row mb-5 p-3 shadow">
+      <div class="row mb-5 p-3 shadow bg-white rounded">
         <div class="col-12">
           <h1>
             <?php
@@ -46,16 +45,16 @@ $auhtor_posts = new WP_query([
           </h1>
         </div>
         <?php
-          // Kolla om det finns någon utvald bild
-          if (has_post_thumbnail()) {
-            // Hämta bilden
-        ?>
+            // Kolla om det finns någon utvald bild
+            if (has_post_thumbnail()) {
+              // Hämta bilden
+              ?>
           <div class="col-3">
-            <img class="img-fluid" src="<?php echo get_the_post_thumbnail_url(); ?>">
+            <img class="img-fluid img-thumbnail" src="<?php echo get_the_post_thumbnail_url(); ?>">
           </div>
         <?php
-          }
-        ?>
+            }
+            ?>
         <div class="col-9">
           <p class="lead p-2">
             <?php
@@ -98,9 +97,10 @@ $auhtor_posts = new WP_query([
     }
   }
 
-
+  // Hämta den globala wp_queryn
+  global $wp_query;
   // Hämta paginations länkar
-  sp_pagination($auhtor_posts);
+  sp_pagination($wp_query);
 
   // Nollställ frågan til databasen
   wp_reset_postdata();

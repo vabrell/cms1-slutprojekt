@@ -42,7 +42,7 @@
 // Lägg till alla body classer
 ?>
 
-<body <?php body_class(); ?>>
+<body <?php body_class('bg-secondary'); ?>>
 
   <?php
   // Lägg till huvudmenyn via en mall-del

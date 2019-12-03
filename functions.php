@@ -370,7 +370,7 @@ function sp_pagination($query)
   $links = [];
   $prev = '';
   $next = '';
-  
+
   // Kolla om det bara är en sida och returnera
   if ($total < 2) {
     return;

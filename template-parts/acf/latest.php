@@ -22,14 +22,14 @@ if (have_rows('latest')) {
         ?>
         <div class="row p-3">
           <div class="col-12">
-            <h2 class="text-primary">Senaste inläggen</h2>
+            <h2 class="text-center p-2 rounded text-white m-5">Senaste inläggen</h2>
           </div>
           <?php
                   while ($posts->have_posts()) {
                     // Hämta posten och ta bort den ur listan
                     $posts->the_post();
                     ?>
-            <div class="col-lg-3 shadow p-3 m-3">
+            <div class="col-lg-3 mb-5 p-3 shadow bg-white rounded">
               <div class="row">
                 <div class="col-12">
                   <a href="<?php echo get_the_permalink(); ?>">
@@ -86,7 +86,7 @@ if (have_rows('latest')) {
               ?>
         <div class="row p-3">
           <div class="col-12">
-            <h2 class="text-primary">Senaste recepten</h2>
+            <h2 class="text-center p-2 rounded text-white m-5">Senaste recepten</h2>
           </div>
 
           <?php
@@ -94,7 +94,7 @@ if (have_rows('latest')) {
             // Hämta receptet och ta bort den ur listan
             $recipes->the_post();
             ?>
-            <div class="col-lg-3 shadow p-3 m-3">
+            <div class="col-lg-3 mb-5 p-3 shadow bg-white rounded">
               <div class="row">
                 <div class="col-12">
                   <a href="<?php echo get_the_permalink(); ?>">

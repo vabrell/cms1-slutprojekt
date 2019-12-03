@@ -24,7 +24,7 @@ $recipes = new WP_query([
       // Välj receptet och ta bort den ur listan
       $recipes->the_post();
       ?>
-      <div class="row shadow p-3 mb-5">
+      <div class="row mb-5 p-3 shadow bg-white rounded">
         <div class="row">
           <div class="col">
             <h1>
@@ -47,7 +47,7 @@ $recipes = new WP_query([
           ?>
 
           <div class="col-3">
-            <img class="img-fluid" src="<?php echo get_the_post_thumbnail_url(); ?>">
+            <img class="img-fluid img-thumbnail" src="<?php echo get_the_post_thumbnail_url(); ?>">
           </div>
 
           <?php

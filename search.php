@@ -1,6 +1,14 @@
 <?php
 // Hämta header.php
 get_header();
+
+query_posts([
+  'post_type' => [
+    'post',
+    'recipe'
+  ],
+  'paged' => $paged
+]);
 ?>
 
 <div class="container">
@@ -13,31 +21,40 @@ get_header();
       the_post();
       ?>
 
-      <div class="row mb-3">
-        <div class="col p-3 shadow">
+      <div class="row mb-5 p-3 shadow bg-white rounded">
+        <div class="col-12">
           <h1>
             <?php
-                // Hämta länken till posten
-                ?>
+            // Hämta länken till posten
+            ?>
             <a href="<?php echo get_the_permalink(); ?>">
               <?php
-                  // Hämta titeln på posten
-                  echo get_the_title();
-                  ?>
+              // Hämta titeln på posten
+              echo get_the_title();
+              ?>
             </a>
           </h1>
+        </div>
+        <?php
+          // Kolla om det finns någon utvald bild
+          if (has_post_thumbnail()) {
+            // Hämta bilden
+            ?>
+        <div class="col-3">
+          <img class="img-fluid img-thumbnail" src="<?php echo get_the_post_thumbnail_url(); ?>">
+        </div>
+            <?php
+          }
+        ?>
+        <div class="col-9">
           <p class="lead p-2">
             <?php
-                // Kolla om inställningen säger att hela innehållet skall visas eller inte
-                if (get_option('rss_use_excerpt')) {
-                  echo get_the_excerpt();
-                }
-                // Hämta innehållet på posten
-                else {
-                  echo get_the_content();
-                }
-                ?>
+            // Hämta beskrivningen
+              echo get_the_excerpt();
+            ?>
           </p>
+        </div>
+        <div class="col-12">
           <div class="bg-light text-muted small">
             <div class="container">
               <div class="row">
@@ -48,9 +65,9 @@ get_header();
               </div>
               <div class="row">
                 <?php
-                    // Hämta kategorier
-                    the_category(', ');
-                    ?>
+                // Hämta kategorier
+                the_category(', ');
+                ?>
               </div>
             </div>
           </div>

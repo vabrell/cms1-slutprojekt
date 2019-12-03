@@ -13,7 +13,7 @@ get_header();
       the_post();
       ?>
 
-      <div class="row mb-5 p-3 shadow">
+      <div class="row mb-5 p-3 shadow bg-white rounded">
         <div class="col-12">
           <h1>
             <?php
@@ -32,7 +32,7 @@ get_header();
           if (has_post_thumbnail()) {
             ?>
         <div class="col-3">
-          <img src="<?php echo get_the_post_thumbnail(); ?>">
+          <img class="img-fluid img-thumbnail" src="<?php echo get_the_post_thumbnail(); ?>">
         </div>
             <?php
           }

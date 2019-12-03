@@ -4,7 +4,7 @@ get_header();
 ?>
 
 <div class="container">
-  <h1>
+  <h1 class="text-center p-2 rounded text-white m-5">
     <?php
     // Hämta titeln för vilket arkiv det är
     echo get_the_archive_title();
@@ -19,7 +19,7 @@ get_header();
       the_post();
       ?>
 
-      <div class="row mb-5 p-3 shadow">
+      <div class="row mb-5 p-3 shadow bg-white rounded">
         <div class="col-12">
           <h1>
             <?php
@@ -39,7 +39,7 @@ get_header();
             // Hämta bilden
             ?>
         <div class="col-3">
-          <img class="img-fluid" src="<?php echo get_the_post_thumbnail_url(); ?>">
+          <img class="img-fluid img-thumbnail" src="<?php echo get_the_post_thumbnail_url(); ?>">
         </div>
             <?php
           }
