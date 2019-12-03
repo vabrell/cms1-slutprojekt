@@ -1,14 +1,6 @@
 <?php
 // Hämta header.php
 get_header();
-
-// Hämta inlägg och recept
-$archive = new WP_query([
-  'post_type' => [
-    'post',
-    'recipe'
-  ]
-]);
 ?>
 
 <div class="container">
@@ -20,11 +12,11 @@ $archive = new WP_query([
   </h1>
   <?php
   // Kolla om det finns någon post i databasen att hämta
-  if ($archive->have_posts()) {
+  if (have_posts()) {
     // Medans det finns poster i databasen loopa igenom dem
-    while ($archive->have_posts()) {
+    while (have_posts()) {
       // Välj posten och ta bort den ur listan
-      $archive->the_post();
+      the_post();
       ?>
 
       <div class="row mb-5 p-3 shadow">
