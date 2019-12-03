@@ -4,6 +4,12 @@
   ?>
   <a class="navbar-brand" href="<?php echo home_url(); ?>">
     <?php
+      // Hämta loggan från inställningarna
+      if (get_field('logo', 'options')) {
+        ?>
+    <img class="img-logo" src="<?php echo get_field('logo', 'options'); ?>">
+        <?php
+      }
       // Hämta namnet på WordPress sidan från inställningarna
       bloginfo('name');
     ?>

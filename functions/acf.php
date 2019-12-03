@@ -41,7 +41,7 @@ if (is_dir(trailingslashit(WP_PLUGIN_DIR) . 'advanced-custom-fields-pro')) {
 
       // Lägg till undermenyn för Google Maps
       acf_add_options_sub_page([
-        'page_title' => __('Our location', 'sp'),
+        'page_title' => __('Company information', 'sp'),
         'parent_slug' => 'theme-settings'
       ]);
     }

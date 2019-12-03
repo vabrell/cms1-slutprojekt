@@ -12,6 +12,8 @@ function sp_load_styles() {
   // Ladda in fontawesome css
   wp_enqueue_style('fontawesome', trailingslashit(get_template_directory_uri()) . 'css/fontawesome.min.css');
   wp_enqueue_style('fontawesome-brands', trailingslashit(get_template_directory_uri()) . 'css/brands.min.css');
+  // Ladda in egen css
+  wp_enqueue_style('slutprojekt', trailingslashit(get_template_directory_uri()) . 'css/slutprojekt.css');
 }
 // Kalla på funktionen för att ladda in css vid kroken wp_enqueue_scripts
 add_action('wp_enqueue_scripts', 'sp_load_styles');
