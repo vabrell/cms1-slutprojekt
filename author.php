@@ -35,16 +35,27 @@ $auhtor_posts = new WP_query([
         <div class="col-12">
           <h1>
             <?php
-            // Hämta länken till posten
-            ?>
+                // Hämta länken till posten
+                ?>
             <a href="<?php echo get_the_permalink(); ?>">
               <?php
-                // Hämta titeln på posten
-                echo get_the_title();
-              ?>
+                  // Hämta titeln på posten
+                  echo get_the_title();
+                  ?>
             </a>
           </h1>
         </div>
+        <?php
+          // Kolla om det finns någon utvald bild
+          if (has_post_thumbnail()) {
+            // Hämta bilden
+        ?>
+          <div class="col-3">
+            <img class="img-fluid" src="<?php echo get_the_post_thumbnail_url(); ?>">
+          </div>
+        <?php
+          }
+        ?>
         <div class="col-9">
           <p class="lead p-2">
             <?php
@@ -57,11 +68,11 @@ $auhtor_posts = new WP_query([
           <div class="bg-light text-muted small">
             <div class="container">
               <div class="row">
-                  <?php
-                      echo __('Author', 'sp') . ':&nbsp;';
-                      // Hämta författaren
-                      echo get_the_author_posts_link();
-                      ?>
+                <?php
+                    echo __('Author', 'sp') . ':&nbsp;';
+                    // Hämta författaren
+                    echo get_the_author_posts_link();
+                    ?>
               </div>
               <div class="row">
                 <?php
@@ -87,7 +98,7 @@ $auhtor_posts = new WP_query([
     }
   }
 
-  
+
   // Hämta paginations länkar
   sp_pagination($auhtor_posts);
 

@@ -33,6 +33,17 @@ get_header();
             </a>
           </h1>
         </div>
+        <?php
+          // Kolla om det finns någon utvald bild
+          if (has_post_thumbnail()) {
+            // Hämta bilden
+            ?>
+        <div class="col-3">
+          <img class="img-fluid" src="<?php echo get_the_post_thumbnail_url(); ?>">
+        </div>
+            <?php
+          }
+        ?>
         <div class="col-9">
           <p class="lead p-2">
             <?php
