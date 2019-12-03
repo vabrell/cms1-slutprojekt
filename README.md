@@ -41,5 +41,6 @@ Alternativt kan länk till git-repo få ersätta loggen, commit-meddelanden skal
 * Skapa funktion för att skriva ut PAGINATION
 * Hitta två ställen till att implementera ACF flex
   * Senaste inlägg/recept
+* Sidmall för Om Oss
 * Översätt för textdomänen
 * Lägg till innehåll
