@@ -33,7 +33,7 @@ Alternativt kan länk till git-repo få ersätta loggen, commit-meddelanden skal
 - [x] Temat har minst fem (5) egentuvecklade funktioner som gynnar temat på något sätt
 - [x] Temat utnyttjar Template Parts 
 - [x] Temat utnyttjar Custom Post Types för valfritt syfte
-- [ ] Temat utnyttjar effektiv ACF Flexibelt innehåll på minst tre ställen
+- [x] Temat utnyttjar effektiv ACF Flexibelt innehåll på minst tre ställen
   * Recept
   * Senaste inlägg/recept
   * Medarbetare
