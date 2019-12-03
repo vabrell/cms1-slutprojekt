@@ -83,7 +83,6 @@ function sp_add_post_types() {
         'title',
         'comments',
         'revisions',
-        'author',
         'excerpt',
         'thumbnail'
       ],
