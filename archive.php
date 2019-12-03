@@ -74,6 +74,11 @@ get_header();
   <?php
     }
   }
+
+  // Hämta den globala wp_queryn
+  global $wp_query;
+  // Hämta paginations länkar
+  sp_pagination($wp_query);
   ?>
 </div>
 

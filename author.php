@@ -10,7 +10,8 @@ if (!is_object($authordata)) {
 
 $auhtor_posts = new WP_query([
   'post_type' => ['post', 'recipe'],
-  'author' => $authordata->ID
+  'author' => $authordata->ID,
+  'paged' => $paged
 ]);
 ?>
 
@@ -85,6 +86,13 @@ $auhtor_posts = new WP_query([
   <?php
     }
   }
+
+  
+  // Hämta paginations länkar
+  sp_pagination($auhtor_posts);
+
+  // Nollställ frågan til databasen
+  wp_reset_postdata();
   ?>
 </div>
 

@@ -349,3 +349,124 @@ function sp_get_open_graph_tags(string $title = '', string $image = '') {
   // Skriv ut taggarna
   echo $open_graphs;
 }
+
+/**
+ * Get the pagination links
+ * 
+ * @param WP_query $query
+ *  Supply the current WordPress query
+ * 
+ * @return echo pagination links
+ */
+
+function sp_pagination($query)
+{
+
+  $current = max(1, get_query_var('paged'));
+  $total = $query->max_num_pages;
+  $count = $total + 1;
+  $end_size = 1;
+  $mid_size = 2;
+  $links = [];
+  $prev = '';
+  $next = '';
+  
+  // Kolla om det bara är en sida och returnera
+  if ($total < 2) {
+    return;
+  }
+
+  // Offseten för nästa länk
+  if ($current < $total)
+    $count--;
+
+  // Tidigare länk
+  if ($current > 1) {
+    $prev = sp_pagination_link($current - 1, 'page-item', 'page-link', __('Previous'));
+  }
+
+  // Tidigare sidor
+  $prev_separator = false;
+  for ($i = 1; $i < $count; $i++) {
+    $page = $i;
+    if ($page < $current) {
+      if (!($page < $current - $mid_size) || $page == 1) {
+        $links[] = sp_pagination_link($page, 'page-item', 'page-link',);
+      } else if (!$prev_separator) {
+        $links[] = sp_pagination_link($page, 'page-item disabled', 'page-link', '...');
+        $prev_separator = true;
+      }
+    }
+  }
+
+  // Nuvarande sida
+  $links[] = sp_pagination_link($current, 'page-item active', 'page-link');
+
+  // Nästa sidor
+  $next_separator = false;
+  for ($i = 1; $i < $count; $i++) {
+    $page = $current + $i;
+    if ($page <= $total) {
+      if (!($page > $current + $mid_size) || $page == $total) {
+        $links[] = sp_pagination_link($page, 'page-item', 'page-link');
+      } else if (!$next_separator) {
+        $links[] = sp_pagination_link($page, 'page-item disabled', 'page-link', '...');
+        $next_separator = true;
+      }
+    }
+  }
+
+  // Nästa länk
+  if ($current < $total) {
+    $next = sp_pagination_link($current + 1, 'page-item', 'page-link', __('Next'));
+  }
+
+  // Skriv ut alla länkar
+  echo '<nav>';
+  echo '<ul class="pagination">';
+  echo $prev;
+  echo join('', $links);
+  echo $next;
+  echo '</ul>';
+  echo '</nav>';
+}
+
+/**
+ * Skapa en paginations länk
+ * 
+ * @param int|bool $page
+ *  The page that the link belongs to
+ * 
+ * @param string $li_class
+ *  The classes that should be added to the LI element.
+ *  To add multiple classes separate with a whitespace
+ * 
+ * @param string $a_class
+ *  The classes that should be added to the A element.
+ *  To add multiple classes separate with a whitespace
+ * 
+ * @param string $label
+ *  The label for the link
+ * 
+ * @return string $formated_link
+ *  Returns a formated link
+ */
+function sp_pagination_link($page = false, $li_class = '', $a_class = '' , $label = '')
+{
+  // Kolla så sidan har skickats med
+  if (!$page) {
+    return;
+  }
+
+  // Kolla om någon text har skickats med annars sätt sidnummret
+  $label = $label ? $label : $page;
+
+  // Sätt länken till sidan
+  $link = esc_url_raw(get_pagenum_link($page));
+
+  // Formatera länken
+  $formated_link = '<li class="' . $li_class . '"><a class="' . $a_class . '" href="' . $link . '">' . $label . '</a></li>';
+
+  // Returnera länken
+  return $formated_link;
+}

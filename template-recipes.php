@@ -9,7 +9,8 @@ get_header();
 
 // Hämta alla recept med en egen fråga till databasen
 $recipes = new WP_query([
-  'post_type' => 'recipe'
+  'post_type' => 'recipe',
+  'paged' => $paged
 ]);
 
 ?>
@@ -68,18 +69,6 @@ $recipes = new WP_query([
                     // Hämta författaren
                     echo get_the_author_posts_link();
                   ?>
-                  &nbsp;@&nbsp;
-                  <?php
-                    // Hämta länk till datum arkiv
-                    $post_date = explode('-', get_the_date('Y-m-d'));
-                    $url = get_day_link($post_date[0], $post_date[1], $post_date[2]);
-                  ?>
-                  <a href="<?php echo $url; ?>">
-                    <?php
-                      // Hämta datum
-                      echo get_the_date();
-                    ?>
-                  </a>
                 </div>
                 <div class="row">
                   <?php
@@ -98,6 +87,9 @@ $recipes = new WP_query([
   <?php
     }
   }
+
+  // Hämta paginations länkar
+  sp_pagination($recipes);
   ?>
 </div>
 

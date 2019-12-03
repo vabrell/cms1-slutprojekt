@@ -45,18 +45,6 @@ get_header();
                   // Hämta författaren
                   echo get_the_author_posts_link();
                 ?>
-                &nbsp;@&nbsp;
-                <?php
-                  // Hämta länk till datum arkiv
-                  $post_date = explode('-', get_the_date('Y-m-d'));
-                  $url = get_day_link($post_date[0], $post_date[1], $post_date[2]);
-                ?>
-                <a href="<?php echo $url; ?>">
-                  <?php
-                    // Hämta datum
-                    echo get_the_date();
-                  ?>
-                </a>
               </div>
               <div class="row">
                 <?php
@@ -72,6 +60,11 @@ get_header();
   <?php
     }
   }
+
+  // Hämta den globala wp_queryn
+  global $wp_query;
+  // Hämta paginations länkar
+  sp_pagination($wp_query);
   ?>
 </div>
 

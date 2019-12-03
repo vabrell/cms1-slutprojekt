@@ -29,7 +29,7 @@ Alternativt kan länk till git-repo få ersätta loggen, commit-meddelanden skal
 
 # Väl Godkänt
 - [ ] Uppfyll kraven för [Godkänt](#godkänt)
-- [ ] Temat har minst fem (5) egentuvecklade funktioner som gynnar temat på något sätt
+- [x] Temat har minst fem (5) egentuvecklade funktioner som gynnar temat på något sätt
 - [x] Temat utnyttjar Template Parts 
 - [x] Temat utnyttjar Custom Post Types för valfritt syfte
 - [ ] Temat utnyttjar effektiv ACF Flexibelt innehåll på minst tre ställen
@@ -38,7 +38,7 @@ Alternativt kan länk till git-repo få ersätta loggen, commit-meddelanden skal
 - [ ] Alla strängar som visas för användare skall vara på engelska och översättningsbara.
 
 # TODO
-* Skapa funktion för att skriva ut PAGINATION
+* ~~Skapa funktion för att skriva ut PAGINATION~~
 * Hitta två ställen till att implementera ACF flex
   * Senaste inlägg/recept
 * Sidmall för Om Oss
