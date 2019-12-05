@@ -37,7 +37,7 @@ get_header();
             ?>
         <div class="col-9 p-3">
 
-          <div class="bg-light text-muted small">
+          <div class="text-muted small">
             <div class="container-fluid">
               <div class="row">
                 <?php

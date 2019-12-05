@@ -52,7 +52,7 @@ get_header();
           </p>
         </div>
         <div class="col-12">
-          <div class="bg-light text-muted small">
+          <div class="text-muted small">
             <div class="container">
               <div class="row">
                 <?php

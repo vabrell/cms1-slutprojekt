@@ -3,7 +3,7 @@
 get_header();
 ?>
 
-<div class="container-fluid">
+<div class="container bg-white mb-5 p-4 rounded">
   <?php
   // Kolla om det finns någon post i databasen att hämta
   if (have_posts()) {
@@ -37,7 +37,7 @@ get_header();
         ?>
         <div class="col-9 p-3">
 
-          <div class="bg-light text-muted small">
+          <div class="text-muted small">
             <div class="container-fluid">
               <div class="row">
                 <?php
