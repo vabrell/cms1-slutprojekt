@@ -34,17 +34,19 @@ get_header();
           </h1>
         </div>
         <?php
+          $column = 'col-10';
             // Kolla om det finns någon utvald bild
             if (has_post_thumbnail()) {
+              $column = 'col-8';
               // Hämta bilden
               ?>
-          <div class="col-3">
+          <div class="col-4">
             <img class="img-fluid img-thumbnail" src="<?php echo get_the_post_thumbnail_url(); ?>">
           </div>
         <?php
             }
             ?>
-        <div class="col-9">
+        <div class="<?php echo $column; ?>">
           <p class="lead p-2">
             <?php
                 // Hämta beskrivningen
@@ -53,7 +55,7 @@ get_header();
           </p>
         </div>
         <div class="col-12">
-          <div class="bg-light text-muted small">
+          <div class="text-muted small">
             <div class="container">
               <div class="row">
                 <?php

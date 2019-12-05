@@ -28,16 +28,18 @@ get_header();
           </h1>
         </div>
         <?php
+          $column = 'col-10';
           // Kolla om det finns någon utvald bild
           if (has_post_thumbnail()) {
+            $column = 'col-8';
             ?>
-        <div class="col-3">
+        <div class="col-4">
           <img class="img-fluid img-thumbnail" src="<?php echo get_the_post_thumbnail(); ?>">
         </div>
             <?php
           }
         ?>
-        <div class="col-9">
+        <div class="<?php echo $column; ?>">
           <p class="lead p-2">
             <?php
                 // Kolla om inställningen säger att hela innehållet skall visas eller inte

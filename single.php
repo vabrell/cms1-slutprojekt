@@ -24,18 +24,20 @@ get_header();
       </div>
       <div class="row mb-3">
         <?php
+          $column = 'col-10';
           // Kolla om det finns någon utvald bild
           if (has_post_thumbnail()) {
+            $column = 'col-8';
         ?>
 
-        <div class="col-3">
+        <div class="col-4">
           <img class="img-fluid" src="<?php echo get_the_post_thumbnail_url(); ?>">
         </div>
 
         <?php
           }
         ?>
-        <div class="col-9 p-3">
+        <div class="<?php echo $column; ?> p-3">
 
           <div class="text-muted small">
             <div class="container-fluid">
