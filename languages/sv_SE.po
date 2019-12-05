@@ -247,3 +247,19 @@ msgstr "Senaste inläggen"
 #: template-parts/acf/latest.php:92
 msgid "Latest recipes"
 msgstr "Senaste recepten"
+
+#: functions/acf.php:21
+msgid "Theme settings"
+msgstr "Tema inställningar"
+
+#: functions/acf.php:32
+msgid "Newsletter"
+msgstr "Nyhetsbrev"
+
+#: functions/acf.php:38
+msgid "Editors"
+msgstr "Redaktörer"
+
+#: functions/acf.php:43
+msgid "Company information"
+msgstr "Företags information"
