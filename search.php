@@ -16,7 +16,7 @@ query_posts([
   <h1 class="text-white text-center">
     <?php
       // Skriv ut det man sökt på
-      echo __('Search results for') . ': ' . get_search_query();
+      echo __('Search results for', 'sp') . ': ' . get_search_query();
     ?>
   </h1>
   <?php
