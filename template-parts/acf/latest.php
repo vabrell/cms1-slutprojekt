@@ -48,7 +48,7 @@ if (have_rows('latest')) {
                   ?>
 
                   <div class="col-4">
-                    <img src="<?php echo get_the_post_thumbnail_url(); ?>">
+                    <img class="img-fluid img-thumbnail" src="<?php echo get_the_post_thumbnail_url(); ?>">
                   </div>
 
                 <?php
@@ -115,7 +115,7 @@ if (have_rows('latest')) {
                   ?>
 
                   <div class="col-4">
-                    <img class="img-fluid" src="<?php echo get_the_post_thumbnail_url(); ?>">
+                    <img class="img-fluid img-thumbnail" src="<?php echo get_the_post_thumbnail_url(); ?>">
                   </div>
 
                 <?php
