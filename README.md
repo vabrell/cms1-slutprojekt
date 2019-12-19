@@ -19,6 +19,7 @@ Slutprojekt för CMS1, IT-Högskolan
   * Ultimate Social Media Icons (plugin)
 - [x] Installationen skall ha optimerats för SEO,  exempelvis med användning av Cache och SEO plugin
   * Yoast SEO (plugin)
+  * WP Super Cache (plugin)
 - [x] All kod skall vara kommenterad, där skall även framgå vem som kommenterat
 - [x] En individuell arbetslog skall föras, där varje dags arbete summeras kort igenom:
   * Vad som åstadkommits
@@ -44,5 +45,5 @@ Alternativt kan länk till git-repo få ersätta loggen, commit-meddelanden skal
 * ~~Hitta två ställen till att implementera ACF flex~~
 * ~~Sidmall för Om Oss~~
 * ~~Översätt för textdomänen~~
-* Lägg till innehåll
+* ~~Lägg till innehåll~~
 * ~~Kolla på fel med pagination (författare)~~
